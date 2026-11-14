@@ -54,10 +54,50 @@
             text-align: center;
         }
 
+        .practical-gallery {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(min(100%, 250px), 1fr)
+            );
+            gap: 24px;
+            margin-top: 30px;
+        }
+
+        .practical-card {
+            min-width: 0;
+            padding: 18px;
+            background: #172238;
+            border: 1px solid rgba(129, 140, 248, 0.2);
+            border-radius: 14px;
+        }
+
+        .practical-card img {
+            display: block;
+            width: 100%;
+            height: 230px;
+            object-fit: contain;
+            background: #111a2e;
+            border-radius: 8px;
+        }
+
+        .practical-card h3 {
+            margin-top: 18px;
+            margin-bottom: 10px;
+            color: #f8fafc;
+        }
+
+        .practical-card p {
+            color: #cbd5e1;
+            line-height: 1.7;
+            font-size: 0.92rem;
+        }
+
         @media (max-width: 600px) {
-            .project-screenshots img {
+            .project-screenshots img,
+            .practical-card img {
                 height: auto;
-                max-height: 260px;
+                max-height: 300px;
             }
         }
     </style>
@@ -112,7 +152,6 @@
                 <div class="section-heading">
                     <p class="eyebrow">FEATURED PROJECT</p>
                     <h2>NCTX Bus Ticket Application</h2>
-
                     <p>Python programming project</p>
                 </div>
 
@@ -179,12 +218,11 @@
 
                 </div>
 
-                <!-- PYTHON PROJECT SCREENSHOTS -->
+                <!-- NCTX SCREENSHOTS -->
                 <div class="section-heading"
-                     style="margin-top: 45px;">
+                     style="margin-top:45px;">
 
                     <p class="eyebrow">PROJECT EVIDENCE</p>
-
                     <h3>Application Screenshots</h3>
 
                     <p>
@@ -201,10 +239,9 @@
                     <figure>
                         <img
                             src="ticket-menu.png"
-                            alt="Python application displaying seven bus ticket categories"
+                            alt="Python application displaying bus ticket categories"
                             loading="lazy"
                         >
-
                         <figcaption>
                             Ticket Selection Menu
                         </figcaption>
@@ -216,7 +253,6 @@
                             alt="Python application rejecting invalid ticket selections"
                             loading="lazy"
                         >
-
                         <figcaption>
                             Input Validation and Error Handling
                         </figcaption>
@@ -225,10 +261,9 @@
                     <figure>
                         <img
                             src="ticket-purchase.png"
-                            alt="Python application displaying a simulated purchase and purchase history"
+                            alt="Python application displaying a simulated purchase"
                             loading="lazy"
                         >
-
                         <figcaption>
                             Ticket Purchase Simulation
                         </figcaption>
@@ -240,114 +275,117 @@
 
         </section>
 
-        <!-- TESTING AND TECHNICAL WORK -->
+        <!-- PYTHON PROGRAMMING PRACTICALS -->
         <section class="section container">
 
             <div class="section-heading">
-                <p class="eyebrow">SOFTWARE DEVELOPMENT</p>
-                <h2>Testing and troubleshooting</h2>
+
+                <p class="eyebrow">UNIVERSITY PRACTICALS</p>
+
+                <h2>Python Programming Practicals</h2>
+
+                <p>
+                    During my university practical sessions,
+                    I worked with Python inside an Ubuntu
+                    virtual machine. I practised using regular
+                    expressions, working with text files,
+                    exploring directories and writing
+                    recursive functions.
+                </p>
+
+                <p>
+                    These were smaller programming exercises
+                    where I could try out different approaches,
+                    check the output and get more comfortable
+                    writing Python code in Linux.
+                </p>
+
             </div>
 
-            <div class="project-grid">
+            <div class="practical-gallery">
 
-                <article class="project-card">
+                <!-- REGULAR EXPRESSIONS -->
+                <article class="practical-card">
 
-                    <div class="project-label">
-                        SOFTWARE TESTING
-                    </div>
+                    <img
+                        src="regex-python.jpg"
+                        alt="Python regular expression exercise showing match, search and findall"
+                        loading="lazy"
+                    >
 
-                    <h3>NCTX Application Testing</h3>
-
-                    <p>
-                        While working on my bus ticket
-                        application, I tested different
-                        inputs to see how the program
-                        behaved. This included invalid
-                        menu choices, boundary cases
-                        and scenarios involving CSV files.
-                    </p>
+                    <h3>Regular Expressions</h3>
 
                     <p>
-                        Testing was an important part
-                        of the project because it gave
-                        me a chance to identify problems
-                        and check whether the program
-                        worked as expected.
+                        I used Python's re module to
+                        search for file names in a string.
+                        I tested match(), search() and
+                        findall() to see how each method
+                        returned different results.
                     </p>
-
-                    <div class="project-tags">
-                        <span>Testing</span>
-                        <span>Debugging</span>
-                        <span>Python</span>
-                    </div>
 
                 </article>
 
-                <article class="project-card">
+                <!-- WORD COUNT -->
+                <article class="practical-card">
 
-                    <div class="project-label">
-                        PRACTICAL LEARNING
-                    </div>
+                    <img
+                        src="word-count.jpg"
+                        alt="Python word counting function running in Ubuntu"
+                        loading="lazy"
+                    >
 
-                    <h3>Linux and Cryptography</h3>
-
-                    <p>
-                        In my cyber security labs,
-                        I've been practising Linux
-                        commands, working with files
-                        and changing file permissions.
-                        I've also used Python for
-                        scripting exercises.
-                    </p>
+                    <h3>File Handling and Word Counting</h3>
 
                     <p>
-                        Some of the practicals covered
-                        cryptography, including GPG
-                        keys and digital signatures.
-                        These gave me a chance to
-                        explore security concepts
-                        through practical tasks.
+                        I wrote a function that reads
+                        a text file, separates the words
+                        and counts how often each word
+                        appears. I used a dictionary
+                        to store the results.
                     </p>
-
-                    <div class="project-tags">
-                        <span>Linux</span>
-                        <span>Permissions</span>
-                        <span>Cryptography</span>
-                    </div>
 
                 </article>
 
-                <article class="project-card">
+                <!-- DIRECTORY TRAVERSAL -->
+                <article class="practical-card">
 
-                    <div class="project-label">
-                        NETWORKING
-                    </div>
+                    <img
+                        src="directory-traversal.jpg"
+                        alt="Python recursive directory traversal using the os module"
+                        loading="lazy"
+                    >
 
-                    <h3>Virtual Network Configuration</h3>
-
-                    <p>
-                        During my networking labs,
-                        I've used VMware virtual
-                        machines to practise network
-                        configuration and explore
-                        different system settings.
-                    </p>
+                    <h3>Directory Traversal</h3>
 
                     <p>
-                        I've also worked through
-                        connection and configuration
-                        issues during practical sessions.
-                        These tasks have given me
-                        more experience working with
-                        virtual environments and
-                        network fundamentals.
+                        I used Python's os module to
+                        explore files and folders in
+                        an Ubuntu environment. The
+                        function checks each path and
+                        continues into subdirectories
+                        to list the files it finds.
                     </p>
 
-                    <div class="project-tags">
-                        <span>VMware</span>
-                        <span>Networking</span>
-                        <span>Virtual Machines</span>
-                    </div>
+                </article>
+
+                <!-- RECURSION -->
+                <article class="practical-card">
+
+                    <img
+                        src="recursion-python.jpg"
+                        alt="Python recursive palindrome function tested with different words"
+                        loading="lazy"
+                    >
+
+                    <h3>Recursion and Palindromes</h3>
+
+                    <p>
+                        I created a recursive function
+                        to check whether a word is a
+                        palindrome. I tested it with
+                        words such as noon, hello
+                        and radar to check the results.
+                    </p>
 
                 </article>
 
@@ -355,22 +393,14 @@
 
         </section>
 
-        <!-- OTHER UNIVERSITY WORK -->
+        <!-- TESTING AND TECHNICAL WORK -->
         <section class="section section-alt">
 
             <div class="container">
 
                 <div class="section-heading">
-                    <p class="eyebrow">ACADEMIC WORK</p>
-                    <h2>Research and communication</h2>
-
-                    <p>
-                        Not all my university work
-                        involves programming. I've
-                        also completed research and
-                        presentation assignments
-                        on technology and sustainability.
-                    </p>
+                    <p class="eyebrow">SOFTWARE DEVELOPMENT</p>
+                    <h2>Testing and troubleshooting</h2>
                 </div>
 
                 <div class="project-grid">
@@ -378,31 +408,32 @@
                     <article class="project-card">
 
                         <div class="project-label">
-                            RESEARCH REPORT
+                            SOFTWARE TESTING
                         </div>
 
-                        <h3>
-                            Technology and Responsible
-                            Consumption
-                        </h3>
+                        <h3>NCTX Application Testing</h3>
 
                         <p>
-                            For this assignment, I
-                            researched how technology
-                            can support responsible
-                            consumption and production.
+                            While working on my bus ticket
+                            application, I tested different
+                            inputs to see how the program
+                            behaved. This included invalid
+                            menu choices, boundary cases
+                            and scenarios involving CSV files.
                         </p>
 
                         <p>
-                            I had to find relevant
-                            information, organise
-                            my research and present
-                            my findings in a report.
+                            Testing was an important part
+                            of the project because it gave
+                            me a chance to identify problems
+                            and check whether the program
+                            worked as expected.
                         </p>
 
                         <div class="project-tags">
-                            <span>Research</span>
-                            <span>Report Writing</span>
+                            <span>Testing</span>
+                            <span>Debugging</span>
+                            <span>Python</span>
                         </div>
 
                     </article>
@@ -410,33 +441,33 @@
                     <article class="project-card">
 
                         <div class="project-label">
-                            PRESENTATION
+                            PRACTICAL LEARNING
                         </div>
 
-                        <h3>
-                            UN Sustainable Development
-                            Goals
-                        </h3>
+                        <h3>Linux and Cryptography</h3>
 
                         <p>
-                            I prepared academic work
-                            looking at the United Nations
-                            Sustainable Development Goals
-                            and how technology relates
-                            to global challenges.
+                            In my cyber security labs,
+                            I've been practising Linux
+                            commands, working with files
+                            and changing file permissions.
+                            I've also used Python for
+                            scripting exercises.
                         </p>
 
                         <p>
-                            The assignment involved
-                            researching the topic,
-                            deciding which information
-                            to include and presenting
-                            it clearly.
+                            Some of the practicals covered
+                            cryptography, including GPG
+                            keys and digital signatures.
+                            These gave me a chance to
+                            explore security concepts
+                            through practical tasks.
                         </p>
 
                         <div class="project-tags">
-                            <span>Presentation</span>
-                            <span>Research</span>
+                            <span>Linux</span>
+                            <span>Permissions</span>
+                            <span>Cryptography</span>
                         </div>
 
                     </article>
@@ -444,35 +475,33 @@
                     <article class="project-card">
 
                         <div class="project-label">
-                            WEB DEVELOPMENT
+                            NETWORKING
                         </div>
 
-                        <h3>
-                            Personal Portfolio Website
-                        </h3>
+                        <h3>Virtual Network Configuration</h3>
 
                         <p>
-                            I created this website
-                            to keep my projects,
-                            technical skills and
-                            learning in one place.
-                            I wanted something I
-                            could share when applying
-                            for placements.
+                            During my networking labs,
+                            I've used VMware virtual
+                            machines to practise network
+                            configuration and explore
+                            different system settings.
                         </p>
 
                         <p>
-                            I worked with HTML and CSS
-                            to build the pages, organise
-                            the navigation and make
-                            the layout work on different
-                            screen sizes.
+                            I've also worked through
+                            connection and configuration
+                            issues during practical sessions.
+                            These tasks have given me
+                            more experience working with
+                            virtual environments and
+                            network fundamentals.
                         </p>
 
                         <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>Web Design</span>
+                            <span>VMware</span>
+                            <span>Networking</span>
+                            <span>Virtual Machines</span>
                         </div>
 
                     </article>
@@ -483,31 +512,158 @@
 
         </section>
 
-        <!-- NEXT PAGE -->
+        <!-- OTHER UNIVERSITY WORK -->
         <section class="section container">
 
-            <div class="contact-section">
-
-                <p class="eyebrow">CONTINUOUS LEARNING</p>
-
-                <h2>Learning through practice.</h2>
+            <div class="section-heading">
+                <p class="eyebrow">ACADEMIC WORK</p>
+                <h2>Research and communication</h2>
 
                 <p>
-                    Visit my learning log to see
-                    what I've been studying and
-                    how I've been building my
-                    technical knowledge.
+                    Not all my university work
+                    involves programming. I've
+                    also completed research and
+                    presentation assignments
+                    on technology and sustainability.
                 </p>
+            </div>
 
-                <div class="hero-buttons">
+            <div class="project-grid">
 
-                    <a href="learning.html" class="btn btn-primary">
-                        View My Learning Log
-                    </a>
+                <article class="project-card">
 
-                    <a href="skills.html" class="btn btn-secondary">
-                        Explore My Skills
-                    </a>
+                    <div class="project-label">
+                        RESEARCH REPORT
+                    </div>
+
+                    <h3>
+                        Technology and Responsible
+                        Consumption
+                    </h3>
+
+                    <p>
+                        For this assignment, I
+                        researched how technology
+                        can support responsible
+                        consumption and production.
+                    </p>
+
+                    <p>
+                        I had to find relevant
+                        information, organise
+                        my research and present
+                        my findings in a report.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Research</span>
+                        <span>Report Writing</span>
+                    </div>
+
+                </article>
+
+                <article class="project-card">
+
+                    <div class="project-label">
+                        PRESENTATION
+                    </div>
+
+                    <h3>
+                        UN Sustainable Development Goals
+                    </h3>
+
+                    <p>
+                        I prepared academic work
+                        looking at the United Nations
+                        Sustainable Development Goals
+                        and how technology relates
+                        to global challenges.
+                    </p>
+
+                    <p>
+                        The assignment involved
+                        researching the topic,
+                        deciding which information
+                        to include and presenting
+                        it clearly.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Presentation</span>
+                        <span>Research</span>
+                    </div>
+
+                </article>
+
+                <article class="project-card">
+
+                    <div class="project-label">
+                        WEB DEVELOPMENT
+                    </div>
+
+                    <h3>Personal Portfolio Website</h3>
+
+                    <p>
+                        I created this website
+                        to keep my projects,
+                        technical skills and
+                        learning in one place.
+                        I wanted something I
+                        could share when applying
+                        for placements.
+                    </p>
+
+                    <p>
+                        I worked with HTML and CSS
+                        to build the pages, organise
+                        the navigation and make
+                        the layout work on different
+                        screen sizes.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Web Design</span>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- NEXT PAGE -->
+        <section class="section section-alt">
+
+            <div class="container">
+
+                <div class="contact-section">
+
+                    <p class="eyebrow">CONTINUOUS LEARNING</p>
+
+                    <h2>Learning through practice.</h2>
+
+                    <p>
+                        Visit my learning log to see
+                        what I've been studying and
+                        how I've been building my
+                        technical knowledge.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="learning.html"
+                           class="btn btn-primary">
+                            View My Learning Log
+                        </a>
+
+                        <a href="skills.html"
+                           class="btn btn-secondary">
+                            Explore My Skills
+                        </a>
+
+                    </div>
 
                 </div>
 
@@ -517,6 +673,7 @@
 
     </main>
 
+    <!-- FOOTER -->
     <footer class="site-footer">
 
         <div class="container footer-content">
@@ -528,4 +685,3 @@
 
 </body>
 </html>
-
