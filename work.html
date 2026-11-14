@@ -17,6 +17,50 @@
           rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .project-screenshots {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(min(100%, 260px), 1fr)
+            );
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .project-screenshots figure {
+            margin: 0;
+            min-width: 0;
+            overflow: hidden;
+            background: #111a2e;
+            border: 1px solid rgba(129, 140, 248, 0.2);
+            border-radius: 14px;
+        }
+
+        .project-screenshots img {
+            display: block;
+            width: 100%;
+            height: 210px;
+            object-fit: contain;
+            background: #ffffff;
+        }
+
+        .project-screenshots figcaption {
+            padding: 14px 12px;
+            color: #c7d2fe;
+            font-size: 0.88rem;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .project-screenshots img {
+                height: auto;
+                max-height: 260px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -50,10 +94,11 @@
                 <h1>Projects and practical experience.</h1>
 
                 <p>
-                    A selection of programming projects,
-                    technical exercises and university
-                    assignments that demonstrate my
-                    developing skills and interests.
+                    Here are some of the projects I've worked
+                    on during university, from writing Python
+                    programs to working with Linux and
+                    virtual networks. I've included what
+                    I worked on and what I learnt along the way.
                 </p>
             </div>
 
@@ -76,28 +121,31 @@
                     <div class="about-text">
 
                         <p>
-                            Developed a Python application
-                            simulating bus ticket purchases.
-                            The program allows users to
-                            select ticket options and
-                            records simulated purchase
-                            information using CSV files.
+                            For one of my university projects,
+                            I created a bus ticket application
+                            using Python. The program lets
+                            users choose from different ticket
+                            options, calculates the cost and
+                            records simulated purchases
+                            using CSV files.
                         </p>
 
                         <p>
-                            The project incorporated
-                            input validation, exception
-                            handling and testing to
-                            improve the reliability
-                            of the application.
+                            One part I focused on was making
+                            sure the program could deal with
+                            incorrect inputs. I used input
+                            validation and exception handling,
+                            then tested different selections
+                            to check how the program responded.
                         </p>
 
                         <p>
-                            Working on this project
-                            helped me strengthen my
-                            Python programming,
-                            debugging, data handling
-                            and problem-solving skills.
+                            I also worked with purchase
+                            records and ticket prices.
+                            It was useful seeing how
+                            different parts of the program
+                            worked together, especially
+                            when testing and fixing errors.
                         </p>
 
                     </div>
@@ -131,6 +179,63 @@
 
                 </div>
 
+                <!-- PYTHON PROJECT SCREENSHOTS -->
+                <div class="section-heading"
+                     style="margin-top: 45px;">
+
+                    <p class="eyebrow">PROJECT EVIDENCE</p>
+
+                    <h3>Application Screenshots</h3>
+
+                    <p>
+                        These screenshots show the ticket
+                        menu, how the program handles
+                        an invalid option and an example
+                        of a simulated purchase.
+                    </p>
+
+                </div>
+
+                <div class="project-screenshots">
+
+                    <figure>
+                        <img
+                            src="ticket-menu.png"
+                            alt="Python application displaying seven bus ticket categories"
+                            loading="lazy"
+                        >
+
+                        <figcaption>
+                            Ticket Selection Menu
+                        </figcaption>
+                    </figure>
+
+                    <figure>
+                        <img
+                            src="input-validation.png"
+                            alt="Python application rejecting invalid ticket selections"
+                            loading="lazy"
+                        >
+
+                        <figcaption>
+                            Input Validation and Error Handling
+                        </figcaption>
+                    </figure>
+
+                    <figure>
+                        <img
+                            src="ticket-purchase.png"
+                            alt="Python application displaying a simulated purchase and purchase history"
+                            loading="lazy"
+                        >
+
+                        <figcaption>
+                            Ticket Purchase Simulation
+                        </figcaption>
+                    </figure>
+
+                </div>
+
             </div>
 
         </section>
@@ -154,18 +259,20 @@
                     <h3>NCTX Application Testing</h3>
 
                     <p>
-                        Tested application behaviour
-                        using different inputs,
-                        including invalid entries,
-                        boundary cases and
-                        CSV-related scenarios.
+                        While working on my bus ticket
+                        application, I tested different
+                        inputs to see how the program
+                        behaved. This included invalid
+                        menu choices, boundary cases
+                        and scenarios involving CSV files.
                     </p>
 
                     <p>
-                        This helped me understand
-                        the importance of identifying
-                        errors and improving program
-                        reliability.
+                        Testing was an important part
+                        of the project because it gave
+                        me a chance to identify problems
+                        and check whether the program
+                        worked as expected.
                     </p>
 
                     <div class="project-tags">
@@ -185,18 +292,21 @@
                     <h3>Linux and Cryptography</h3>
 
                     <p>
-                        Completed practical exercises
-                        involving Linux commands,
-                        file permissions, Python
-                        scripting and cryptographic
-                        concepts.
+                        In my cyber security labs,
+                        I've been practising Linux
+                        commands, working with files
+                        and changing file permissions.
+                        I've also used Python for
+                        scripting exercises.
                     </p>
 
                     <p>
-                        These exercises strengthened
-                        my understanding of operating
-                        systems and fundamental
-                        security principles.
+                        Some of the practicals covered
+                        cryptography, including GPG
+                        keys and digital signatures.
+                        These gave me a chance to
+                        explore security concepts
+                        through practical tasks.
                     </p>
 
                     <div class="project-tags">
@@ -216,16 +326,20 @@
                     <h3>Virtual Network Configuration</h3>
 
                     <p>
-                        Used VMware virtual machines
-                        to explore networking
-                        configuration, system settings
-                        and technical troubleshooting.
+                        During my networking labs,
+                        I've used VMware virtual
+                        machines to practise network
+                        configuration and explore
+                        different system settings.
                     </p>
 
                     <p>
-                        This developed my confidence
-                        working with virtual
-                        environments and understanding
+                        I've also worked through
+                        connection and configuration
+                        issues during practical sessions.
+                        These tasks have given me
+                        more experience working with
+                        virtual environments and
                         network fundamentals.
                     </p>
 
@@ -251,10 +365,11 @@
                     <h2>Research and communication</h2>
 
                     <p>
-                        University assignments that
-                        helped me develop research,
-                        presentation and written
-                        communication skills.
+                        Not all my university work
+                        involves programming. I've
+                        also completed research and
+                        presentation assignments
+                        on technology and sustainability.
                     </p>
                 </div>
 
@@ -272,18 +387,17 @@
                         </h3>
 
                         <p>
-                            Researched the role of
-                            technology in supporting
-                            responsible consumption
-                            and production.
+                            For this assignment, I
+                            researched how technology
+                            can support responsible
+                            consumption and production.
                         </p>
 
                         <p>
-                            This assignment developed
-                            my ability to research,
-                            organise information
-                            and communicate findings
-                            in a structured report.
+                            I had to find relevant
+                            information, organise
+                            my research and present
+                            my findings in a report.
                         </p>
 
                         <div class="project-tags">
@@ -305,17 +419,19 @@
                         </h3>
 
                         <p>
-                            Prepared academic work
-                            exploring sustainability
-                            and the role of technology
-                            in addressing global
-                            challenges.
+                            I prepared academic work
+                            looking at the United Nations
+                            Sustainable Development Goals
+                            and how technology relates
+                            to global challenges.
                         </p>
 
                         <p>
-                            This strengthened my
-                            research, organisation
-                            and presentation skills.
+                            The assignment involved
+                            researching the topic,
+                            deciding which information
+                            to include and presenting
+                            it clearly.
                         </p>
 
                         <div class="project-tags">
@@ -336,18 +452,21 @@
                         </h3>
 
                         <p>
-                            Designed and developed
-                            a portfolio website to
-                            showcase my technical
-                            skills, academic work
-                            and professional development.
+                            I created this website
+                            to keep my projects,
+                            technical skills and
+                            learning in one place.
+                            I wanted something I
+                            could share when applying
+                            for placements.
                         </p>
 
                         <p>
-                            This project strengthened
-                            my understanding of HTML,
-                            CSS, navigation and
-                            responsive web design.
+                            I worked with HTML and CSS
+                            to build the pages, organise
+                            the navigation and make
+                            the layout work on different
+                            screen sizes.
                         </p>
 
                         <div class="project-tags">
@@ -374,9 +493,10 @@
                 <h2>Learning through practice.</h2>
 
                 <p>
-                    Explore how my technical knowledge
-                    and professional skills have
-                    developed over time.
+                    Visit my learning log to see
+                    what I've been studying and
+                    how I've been building my
+                    technical knowledge.
                 </p>
 
                 <div class="hero-buttons">
@@ -408,3 +528,4 @@
 
 </body>
 </html>
+
